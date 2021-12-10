@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8"/>
+    <link href="style.css" rel="stylesheet">
+    <link href="knacss.css" rel="stylesheet">
+    <script src="index.js"></script> 
+    <link rel="icon" type="image/png" href="img/logo.png" /> 
+    <title>Pictee</title>
+<body>
+    <nav class="navbar">
+    <div class="nav-wrapper">
+        <a onclick="onHome()" class="brand-img clickable"><h1 class="logo">𝒫𝒾𝒸𝓉𝑒𝑒</h1></a>
+        <input type="text" class="search-box" placeholder="search">
+        <div class="nav-items">
+            <a onclick="onHome()" class="icon"><img src="img/home.PNG" class="icon" alt=""></a>
+            <a href="user.html" class="user icon"><img src="img/user.PNG" class="icon" alt=""></a>
+            <a href="user.html?login=root&password=root" class="user-connected icon"><img src="img/user-connected.PNG" class="icon" alt=""></a>
+        </div>
+    </div>
+    </nav>
+    <section class="main">
+        <div class="wrapper">
+            <div class="left-col" id="posts">
+                <div class="post">
+                    <div class="info">
+                        <div class="user">
+                            <div class="profile-pic clickable" onclick="onUserProfile(0)"><img src="img/cover 1.jpg" alt=""></div>
+                            <p class="username clickable" onclick="onUserProfile(0)">daily_sunsets_fr</p>
+                        </div>
+                        <img src="img/option.PNG" class="options" alt="">
+                    </div>
+                    <img src="img/cover 1.jpg" class="post-image" alt="">
+                    <div class="post-content">
+                        <div class="reaction-wrapper">
+                            <img src="img/like.PNG" class="like icon" alt="" onclick="onLikeClick(0)">
+                            <img src="img/liked.PNG" class="liked icon" alt="" onclick="onLikedClick(0)">
+                            <img src="img/comment.PNG" class="icon" alt="" onclick ="onComment(0)">
+                            <img src="img/send.PNG" class="icon" alt="">
+                            <img src="img/save.PNG" class="save icon" alt="">
+                        </div>
+                        <p class="likes">78 j'aime</p>
+                        <p class="description"><span class="clickable" onclick="onUserProfile(0)">daily_sunsets_fr </span> Coucher de soleil sur la mer #cbo #swag</p>
+                        <p class="post-time">il y a 2 minutes</p>
+                        <div class="comments-container"></div>
+                    </div>    
+                    <div class="comment-wrapper">
+                        <input type="text" class="comment-box" placeholder="Ajouter un commentaire">
+                        <button class="comment-btn clickable" onclick="commentPost(0)">envoyer</button>
+                    </div>      
+                </div>
+                <div class="post">
+                    <div class="info">
+                        <div class="user">
+                            <div class="profile-pic clickable" onclick="onUserProfile(1)"><img src="img/cover 2.jpg" alt=""></div>
+                            <p class="username clickable" onclick="onUserProfile(1)">nationnal_zoo</p>
+                        </div>
+                        <img src="img/option.PNG" class="options" alt="">
+                    </div>
+                    <img src="img/cover 2.jpg" class="post-image" alt="">
+                    <div class="post-content">
+                        <div class="reaction-wrapper">
+                            <img src="img/like.PNG" class="like icon" alt="" onclick="onLikeClick(1)">
+                            <img src="img/liked.PNG" class="liked icon" alt="" onclick="onLikedClick(1)">
+                            <img src="img/comment.PNG" class="icon" alt="" onclick ="onComment(1)">
+                            <img src="img/send.PNG" class="icon" alt="">
+                            <img src="img/save.PNG" class="save icon" alt="">
+                        </div>
+                        <p class="likes">143 j'aime</p>
+                        <p class="description"><span class="clickable" onclick="onUserProfile(1)">nationnal_zoo </span>meet Corenting our new beautiful Zebra !</p>
+                        <p class="post-time">il y a 15 minutes</p>
+                        <div class="comments-container"></div>
+                    </div>            
+                    <div class="comment-wrapper">
+                        <input type="text" class="comment-box" placeholder="Ajouter un commentaire">
+                        <button class="comment-btn clickable" onclick="commentPost(1)">envoyer</button>
+                    </div>       
+                </div>
+            </div>
+            <div class="right-col">
+                <div class="profile-card">
+                    <div class="profile-pic">
+                        <img src="img/user-connected.png" alt="">
+                    </div>
+                    <div>
+                        <p class="username">root</p>
+                    </div>
+                </div>
+                <p class="suggestion-text">Suggestions for you</p>
+                <div class="profile-card">
+                    <div class="profile-pic">
+                        <img src="img/cover 1.jpg" alt="">
+                    </div>
+                    <div>
+                        <p class="username">daily_sunsets_fr</p>
+                        <p class="sub-text">suivi par debudebu</p>
+                    </div>
+                    <button class="action-btn follow clickable" onclick="onFollow(0)">suivre</button>
+                    <button class="unfollow clickable" onclick="onUnfollow(0)">Se désabonner</button>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-pic">
+                        <img src="img/cover 2.jpg" alt="">
+                    </div>
+                    <div>
+                        <p class="username">nationnal_zoo</p>
+                        <p class="sub-text">suivi par corenting59</p>
+                    </div>
+                    <button class="action-btn follow clickable" onclick="onFollow(1)">suivre</button>
+                    <button class="unfollow clickable" onclick="onUnfollow(1)">Se désabonner</button>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-pic">
+                        <img src="img/cover 1.jpg" alt="">
+                    </div>
+                    <div>
+                        <p class="username">daily_sunsets_fr</p>
+                        <p class="sub-text">suivi par debudebu</p>
+                    </div>
+                    <button class="action-btn follow clickable" onclick="onFollow(2)">suivre</button>
+                    <button class="unfollow clickable" onclick="onUnfollow(2)">Se désabonner</button>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-pic">
+                        <img src="img/cover 2.jpg" alt="">
+                    </div>
+                    <div>
+                        <p class="username">nationnal_zoo</p>
+                        <p class="sub-text">suivi par corenting59</p>
+                    </div>
+                    <button class="action-btn follow clickable" onclick="onFollow(3)">suivre</button>
+                    <button class="unfollow clickable" onclick="onUnfollow(3)">Se désabonner</button>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-pic">
+                        <img src="img/cover 1.jpg" alt="">
+                    </div>
+                    <div>
+                        <p class="username">daily_sunsets_fr</p>
+                        <p class="sub-text">suivi par debudebu</p>
+                    </div>
+                    <button class="action-btn follow clickable" onclick="onFollow(4)">suivre</button>
+                    <button class="unfollow clickable" onclick="onUnfollow(4)">Se désabonner</button>
+                </div>
+            </div>
+        </div>
+    </section> 
+</body>
+</html>

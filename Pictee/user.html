@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8"/>
+    <link href="style.css" rel="stylesheet">
+    <link href="knacss.css" rel="stylesheet">
+    <script src="user.js"></script> 
+    <link rel="icon" type="image/png" href="img/logo.png" /> 
+    <title>Pictee</title>
+<body>
+    <nav class="navbar">
+    <div class="nav-wrapper">
+        <a onclick="onHome()" class="brand-img clickable"><h1 class="logo">𝒫𝒾𝒸𝓉𝑒𝑒</h1></a>
+        <input type="text" class="search-box" placeholder="search">
+        <div class="nav-items">
+            <a onclick="onHome()" class="icon"><img src="img/home.PNG" class="icon" alt=""></a>
+            <a href="user.html" class="user icon"><img src="img/user.PNG" class="icon" alt=""></a>
+            <a href="user.html?login=root&password=root" class="user-connected icon"><img src="img/user-connected.PNG" class="icon" alt=""></a>
+        </div>
+    </div>
+    </nav>
+    <section class="main">
+        <form class="connection-form">
+            <label for="login">Identifiant</label>
+            <input type="text" name="login" id="login" value="root">
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password" value="root">
+            <input type="submit" value="Envoyer" class="clickable">
+        </form>
+        <input type="button" class="deconnection-button clickable" onclick="onDeconnect()" value="Se deconnecter"></button>
+    </section>
+    <div class="main connection-result clickable" onclick=onProfile()></div>
+    <div class="main avatar-display clickable" onclick=onProfile()></div>
+</body>
+</html>
