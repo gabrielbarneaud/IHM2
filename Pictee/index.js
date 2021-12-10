@@ -70,7 +70,7 @@ function onUserProfile(reference){
         window.location= (connected) ? 'profile.html?login='+login+'&password='+password+'&id=daily_sunsets_fr' : 'profile.html?id=daily_sunsets_fr'
     }
     else if (reference === 1){
-        window.location= (connected) ? 'profile.html?login='+login+'&password='+password+'&id=nationnal_zoo' : 'profile.html?id=-nationnal_zoo'
+        window.location= (connected) ? 'profile.html?login='+login+'&password='+password+'&id=nationnal_zoo' : 'profile.html?id=nationnal_zoo'
     }
     else if (reference === 'root'){
         window.location='profile.html?login='+login+'&password='+password+'&id=root'
